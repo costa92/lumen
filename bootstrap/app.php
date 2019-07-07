@@ -24,7 +24,7 @@ $app = new Laravel\Lumen\Application(
 
 
 $app->configure('hprose'); //加载配置文件
-
+$app->configure('elasticsearch');
  $app->withFacades();
 
  $app->withEloquent();
@@ -85,11 +85,14 @@ $app->singleton(
  $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Lumening\LumenHprose\ServiceProvider::class);
 // $app->register(Laoliu\LaravelHprose\HproseServiceProvider::class);
+//引入elasticsearch
+$app->register(Zero\LumenElasticsearch\LumenServiceProvider::class);
 
 
 //class_alias('Laoliu\LaravelHprose\HproseClientFacade', 'RpcClient');
 //class_alias('Laoliu\LaravelHprose\HproseServerFacade', 'RpcServer');
 class_alias('Lumening\LumenHprose\Facades\Router', 'LumenHproseRouter');
+//class_alias('Cviebrock\LaravelElasticsearch\Facade', 'Elasticsearch');
 
 /*
 |--------------------------------------------------------------------------

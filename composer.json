@@ -7,7 +7,8 @@
     "require": {
         "php": ">=7.1.3",
         "laravel/lumen-framework": "5.8.*",
-        "lumening/lumen-hprose": "^0.2.0@beta"
+        "lumening/lumen-hprose": "^0.2.0@beta",
+        "zzq/lumen-elasticsearch": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
